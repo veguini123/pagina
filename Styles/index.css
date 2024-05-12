@@ -1,80 +1,80 @@
-/* General body and container styles */
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full height of the viewport */
+    min-height: 100vh; 
     margin: 0;
     background-color: #f4f4f4;
 }
 
 .container {
-    width: 450px; /* Fixed width for medium size */
+    width: 450px; 
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background: #fff;
     border-radius: 8px;
-    margin: auto; /* This ensures the container stays centered */
+    margin: auto; 
 }
 
-/* Button styles */
+
 #loginbtn {
-    background-color: #007bff; /* Bootstrap primary blue */
-    color: white;
+    background-color:#4CAF50; 
     border: none;
-    border-radius: 20px; /* Rounded borders */
+    border-radius: 20px; 
 }
 
 #atrasbtn {
     background-color: transparent;
-    color: #007bff; /* Bootstrap primary blue */
-    border: 2px solid #007bff;
+    color: #4CAF50; 
+    border: 2px solid #4CAF50;
     border-radius: 20px;
 }
 
-/* Input field styles */
+
 input[type="email"],
 input[type="password"] {
-    height: 45px; /* Height of the input fields */
-    font-size: 16px; /* Font size of the input text */
+    height: 45px; 
+    font-size: 16px; 
 }
 
-/* Card styling to ensure it's centered with spacing */
+
 .card {
-    margin-top: 10vh; /* Margin top to push down the card a bit */
+    margin-top: 10vh; 
 }
 
 .card-header, .card-footer {
-    background: #f8f9fa; /* Light grey background */
+    background: #f8f9fa; 
     color: #333;
 }
 
-/* Link styling */
+
 a {
-    color: #007bff;
-    text-decoration: none; /* No underline */
+    color:#4CAF50 ;
+    text-decoration: none; 
 }
 
 a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
+    color:#4CAF50 ;
 }
 
-/* Extra button stylings */
+
 .btn-google-login, .btn-facebook-login {
     border: none;
     background: none;
 }
 
-/* Styling for images inside social login buttons */
+
 .google-icon, .facebook-icon {
-    width: 20px; /* Set the size of the social media icons */
+    width: 20px; 
     height: 20px;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
         margin: 10px;
     }
 }

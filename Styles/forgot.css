@@ -1,54 +1,49 @@
+/* Basic styles */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
+    font-family: sans-serif;
     margin: 0;
-    background-color: #f0f0f0; 
-    font-family: Arial, sans-serif; 
-}
-
-form {
-    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 400px; 
-}
-
-h2 {
-    color: #333;
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    color: #666;
-}
-
-input[type="email"], input[type="button"] {
-    width: 100%; 
-    padding: 10px;
-    margin-top: 8px;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    border: 1px solid #007bff; 
-    box-sizing: border-box; 
-}
-
-input[type="email"] {
-    background-color: #fff;
-    color: #333;
-}
-
-input[type="button"] {
-    background-color: #007bff;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+  }
+  
+  /* Button styles */
+  input[type="button"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border: none; 
-}
-
-input[type="button"]:hover {
-    background-color: #0056b3; 
-}
+  }
+  
+  input[type="button"]:hover {
+    background-color: #3e8e41;
+  }
+  
 

@@ -1,33 +1,17 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js'
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCGYNRj5qyJZ03BfQJ6DM8kpmWz5Y9uX94",
-    authDomain: "apiweb2024alejo.firebaseapp.com",
-    projectId: "apiweb2024alejo",
-    storageBucket: "apiweb2024alejo.appspot.com",
-    messagingSenderId: "633367156898",
-    appId: "1:633367156898:web:55923ecede540b9188dffb",
-    measurementId: "G-6PF1Y0YC4S"
-  };
-
-import { 
-    getAuth,
-    signInWithEmailAndPassword,
-} from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+import {
+    loginvalidation,
+  } from "./global.js";
 
 const formularioLogin = document.querySelector('#loginbtn');
 
 formularioLogin.addEventListener("click", async (evento) => {
-    evento.preventDefault(); 
+    evento.preventDefault();
 
     const email = document.getElementById('edtuser').value;
     const contraseña = document.getElementById('edtpassword').value;
 
     try {
-        const credenciales = await signInWithEmailAndPassword(auth, email, contraseña);
+        const credenciales = await loginvalidation(email, contraseña);
         console.log(credenciales);
 
         const modal = new bootstrap.Modal(document.querySelector('#signinModal'));
@@ -42,19 +26,19 @@ formularioLogin.addEventListener("click", async (evento) => {
         
         switch(errorCode) {
             case "auth/invalid-email":
-                alert('El correo electrónico no es válido.');
+                alert('Email no válido.');
                 break;
             case "auth/user-disabled":
-                alert('El usuario ha sido deshabilitado.');
+                alert('La cuenta ha sido desactivada.');
                 break;
             case "auth/user-not-found":
-                alert('No se encontró ningún usuario con este correo electrónico.');
+                alert('"No se encontró ningún usuario asociado a esta dirección de correo electrónico".');
                 break;
             case "auth/missing-password":
-                alert('No hay ninguna contrseña');
+                alert('No se ha detectado ninguna contraseña.');
                 break;
             case "auth/invalid-credential":
-                alert('Contraseña incorrecta.');
+                alert('"La contraseña ingresada es incorrecta".');
                 break;
             default:
                 alert(errorMessage);
@@ -64,9 +48,9 @@ formularioLogin.addEventListener("click", async (evento) => {
 
 atrasbtn.addEventListener('click', (e) => {
     auth.signOut().then(() => {
-        alert('Sesión cerrada');
+        alert('"Se ha cerrado la sesión"');
     }).catch((error) =>{+
-        alert('Error al cerrar sesión');
+        alert('"Se produjo un error al terminar la sesión"');
     });
 })
 

@@ -27,12 +27,14 @@ async function salvarpass()
     try {
       await sendPasswordResetEmail(auth, usuario);
       alert('Password recovery email sent successfully to ' + usuario);
-      window.location.href = 'recoverypass.html';
+      window.location.href = '/Templates/forgot.html';
+
   } catch (error) {
+
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error(errorCode, errorMessage);
-      // Handle error appropriately
+
   }
 }
 

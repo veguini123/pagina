@@ -5,6 +5,7 @@ body {
     padding: 20px;
   }
   
+  /* Container */
   .container {
     display: flex;
     flex-direction: column;
@@ -16,7 +17,7 @@ body {
     padding: 20px;
   }
   
-  h2 {
+  h1 {
     margin-bottom: 20px;
   }
   
@@ -27,26 +28,30 @@ body {
     width: 100%;
   }
   
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  .input-container {
     margin-bottom: 15px;
   }
   
-  /* Button styles */
-  .button-container {
-    margin-top: 20px;
-    text-align: center;
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; /* Make labels block-level for better alignment */
   }
   
-  button {
+  .input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 90%;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #4CAF50; /* Change border color on focus */
+  }
+  
+  /* Button */
+  #btnreg {
     padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
@@ -55,22 +60,17 @@ body {
     cursor: pointer;
   }
   
-  button:hover {
+  #btnreg:hover {
     background-color: #3e8e41;
   }
   
   /* Link styles */
-  .login-link {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .login-link a {
+  a {
     color: #4CAF50;
     text-decoration: none;
   }
   
-  .login-link a:hover {
+  a:hover {
     text-decoration: underline;
   }
   
