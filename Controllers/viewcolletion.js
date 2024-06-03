@@ -1,6 +1,4 @@
-import { realusers } from "./database";
-
-import ( realusers)
+import { realusers } from "./global.js";
 
 const ver = document.getElementById("viewdatas")
 async function cargar(){
@@ -11,16 +9,15 @@ async function cargar(){
     const querySnapshot = await datas
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
-        ver.innerHTML+=
-        
-        `
+        ver.innerHTML+=`
         <tr>
-        <th scope="row">${doc.data().first}</th>
-        <td>${doc.data().last}</td>
-        <td>${doc.data().born}</td>
-        </tr>
-        `
-
+        <th scope="row">${doc.data().email}</th> 
+        <td>${doc.data().id}</td>
+        <td>${doc.data().nombre}</td>
+        <td>${doc.data().direccion}</td>
+        <td>${doc.data().telefono}</td>
+        <td>${doc.data().fecha}</td>
+        </tr> `
 });
 }
 window.addEventListener("DOMContentLoaded",async()=>

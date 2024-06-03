@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/Styles/resultados.css" rel="stylesheet" type="text/css"/>
+    <title>Resultados de la Búsqueda</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="resultCard">
+
+            <h5 class="card-title" id="cardTitle"></h5>
+            <p class="card-text" id="cardEmail"></p>
+            <p class="card-text" id="cardNombre"></p>
+            <p class="card-text" id="cardDireccion"></p>
+            <p class="card-text" id="cardTelefono"></p>
+            <p class="card-text" id="cardFecha"></p>
+
+            <div class="buttons">
+                <button class="button" id="updateBtn">Actualizar</button>
+                <button class="button button-danger" id="deleteBtn">Borrar</button>
+            </div>
+
+        </div>
+        <div class="update-form" id="updateForm" style="display:none;">
+            <h5>Actualizar Datos</h5>
+            <input type="text" id="updateNombre" placeholder="Nombre">
+            <input type="text" id="updateDireccion" placeholder="Dirección">
+            <input type="text" id="updateTelefono" placeholder="Teléfono">
+            <input type="date" id="updateFecha" placeholder="Fecha de Nacimiento">
+            <button class="button" id="saveUpdateBtn">Guardar Cambios</button>
+        </div>
+        
+    </div>
+    <script src="../Controllers/resultados.js" type="module"></script>
+</body>
+</html>
