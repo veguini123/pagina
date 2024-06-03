@@ -47,10 +47,9 @@ body {
   
   .input:focus {
     outline: none;
-    border-color: #4CAF50; /* Change border color on focus */
+    border-color: #4CAF50; 
   }
   
-  /* Button */
   #btnreg {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -64,7 +63,6 @@ body {
     background-color: #3e8e41;
   }
   
-  /* Link styles */
   a {
     color: #4CAF50;
     text-decoration: none;
